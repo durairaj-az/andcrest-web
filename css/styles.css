@@ -297,3 +297,14 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--teal);box-s
   *,*::before,*::after{transition-duration:.001s!important;animation-duration:.001s!important}
   [data-reveal]{opacity:1;transform:none}
 }
+
+/* Offices */
+.offices-h{font-size:19px;margin-bottom:14px}
+.office-group+.office-group{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+.office-country{display:flex;align-items:center;gap:10px;font:600 15px var(--f-display,inherit);color:var(--head,inherit);margin-bottom:12px}
+.flag-circle{width:26px;height:26px;border-radius:50%;overflow:hidden;display:inline-flex;flex:none;box-shadow:0 0 0 1px var(--line-2)}
+.flag-circle .flag{width:100%;height:100%;display:block}
+.office-list{display:grid;gap:14px}
+.office-entry b{display:block;font-size:14.5px;color:var(--head,inherit)}
+.office-entry address{font-style:normal;color:var(--muted);font-size:14.5px;line-height:1.55}
+.nowrap{white-space:nowrap}
