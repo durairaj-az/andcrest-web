@@ -153,7 +153,8 @@ a.card{text-decoration:none;color:inherit;display:block}
 .svc{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:72px 0;border-top:1px solid var(--line)}
 .svc:first-of-type{border-top:0;padding-top:0}
 .svc:nth-of-type(even) .svc-copy{order:2}
-.svc .num{font:500 13px var(--f-mono);color:var(--teal);letter-spacing:.1em}
+.svc .num{display:inline-flex;align-items:center;gap:12px;font:500 12px var(--f-mono);color:var(--teal);letter-spacing:.12em;text-transform:uppercase}
+.svc .num .ic{width:40px;height:40px;font-size:20px;border-radius:10px}
 .svc h2{font-size:clamp(28px,3.2vw,38px);margin:10px 0 14px}
 .ticks{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:11px}
 .ticks li{position:relative;padding-left:30px;color:var(--text);font-size:15.5px}
@@ -208,7 +209,8 @@ a.card{text-decoration:none;color:inherit;display:block}
 .models>div{padding:32px 26px;background:var(--panel);border-right:1px solid var(--line);transition:background .25s}
 .models>div:last-child{border-right:0}
 .models>div:hover{background:var(--panel-2)}
-.models h3{font-size:19px;margin:14px 0 8px}
+.models .ic{width:44px;height:44px;font-size:22px}
+.models h3{font-size:19px;margin:16px 0 8px}
 .models p{font-size:14.5px;color:var(--muted)}
 .models .n{font:500 12px var(--f-mono);color:var(--teal)}
 
