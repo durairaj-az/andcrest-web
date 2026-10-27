@@ -254,6 +254,8 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--teal);box-s
 #form-msg{font-size:14px;color:var(--teal);min-height:1.4em}
 .addr{font-style:normal;color:var(--muted);display:grid;gap:4px}.addr b{color:var(--head);font-family:var(--f-display);font-size:19px}
 .line-i{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15px;margin-top:14px}
+.line-i a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--line-2)}
+.line-i a:hover{color:var(--teal);border-color:var(--teal)}
 .line-i .ico{font-size:20px;color:var(--teal);margin-top:3px}
 
 /* Footer stays dark in both themes */

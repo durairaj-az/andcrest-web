@@ -54,8 +54,20 @@
     var send = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!form.checkValidity()) {
-        msg.textContent = 'Please fill in your name, work email and message.';
+      var email = form.elements.email;
+      if (!form.elements.name.value.trim()) {
+        msg.textContent = 'Please enter your full name.';
+        form.elements.name.focus();
+        return;
+      }
+      if (email.validity.valueMissing || email.validity.typeMismatch) {
+        msg.textContent = 'Please enter a valid work email address, for example name@company.com.';
+        email.focus();
+        return;
+      }
+      if (!form.elements.message.value.trim()) {
+        msg.textContent = 'Please tell us what you want to achieve.';
+        form.elements.message.focus();
         return;
       }
       var data = {};
