@@ -18,7 +18,7 @@ npx wrangler@3 kv:namespace create SUBMISSIONS
 # 3. Set the private key used to read submissions (make one with: openssl rand -hex 24)
 npx wrangler@3 secret put ADMIN_KEY
 
-# 4. Rebuild dist/ and deploy the site and the Worker together (keeps the name "andcrestsite")
+# 4. Rebuild dist/ and deploy the site and the Worker together (keeps the name "andcrestweb")
 npm run deploy
 ```
 
@@ -26,7 +26,7 @@ npm run deploy
 
 Keep the key private. Newest messages come first.
 
-- Table:  `https://andcrestsite.aizentifyadmin.workers.dev/api/submissions?key=YOUR_KEY&format=html`
+- Table:  `https://andcrestweb.aizentifyadmin.workers.dev/api/submissions?key=YOUR_KEY&format=html`
 - JSON:   `.../api/submissions?key=YOUR_KEY`
 - XML:    `.../api/submissions?key=YOUR_KEY&format=xml`
 
