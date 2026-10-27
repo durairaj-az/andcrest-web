@@ -47,17 +47,37 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Contact form (validation only until a backend or mail address is set)
+  // Contact form: posts to the Worker at /api/contact, which stores the message in KV
   var form = document.getElementById('contact-form');
   if (form) {
     var msg = document.getElementById('form-msg');
+    var send = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
         msg.textContent = 'Please fill in your name, work email and message.';
         return;
       }
-      msg.textContent = 'The form is not connected yet. Contact details will be added soon.';
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      send.disabled = true;
+      msg.textContent = 'Sending...';
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok && b.ok, error: b.error }; });
+      }).then(function (res) {
+        if (res.ok) {
+          form.reset();
+          msg.textContent = 'Thank you. We have your message and will reply within one business day.';
+        } else {
+          msg.textContent = res.error || 'We could not send your message. Please try again shortly.';
+        }
+      }).catch(function () {
+        msg.textContent = 'We could not send your message. Please check your connection and try again.';
+      }).then(function () { send.disabled = false; });
     });
   }
 })();

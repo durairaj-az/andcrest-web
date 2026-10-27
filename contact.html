@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="assets/logo-mark-t.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
 <link rel="stylesheet" href="css/styles.css">
 <script>document.documentElement.classList.remove('nojs');try{var th=localStorage.getItem('theme');if(th)document.documentElement.setAttribute('data-theme',th)}catch(e){}</script>
 </head>
@@ -36,6 +36,7 @@
       <label for="segment">Industry<select id="segment" name="segment"><option>FMCG</option><option>BFSI</option><option>MRD</option><option>TMT</option><option>Other</option></select></label>
     </div>
     <label for="message">What do you want to achieve?<textarea id="message" name="message" required></textarea></label>
+    <div class="hp" aria-hidden="true"><label for="website">Leave this field empty<input id="website" name="website" tabindex="-1" autocomplete="off"></label></div>
     <button class="btn" type="submit" style="justify-self:start">Send message <svg class="ico " aria-hidden="true"><use href="#i-arrow"/></svg></button>
     <p id="form-msg" role="status"></p>
   </form>

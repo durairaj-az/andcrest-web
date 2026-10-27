@@ -1,0 +1,10 @@
+{
+  "name": "andcrest-web",
+  "private": true,
+  "scripts": {
+    "build": "sh scripts/build.sh",
+    "zip": "sh scripts/build.sh zip",
+    "dev": "sh scripts/build.sh && npx wrangler@3 dev",
+    "deploy": "sh scripts/build.sh && npx wrangler@3 deploy"
+  }
+}

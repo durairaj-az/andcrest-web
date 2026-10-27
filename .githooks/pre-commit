@@ -1,0 +1,3 @@
+#!/bin/sh
+# Keeps dist/ in step with the site files on every commit.
+sh scripts/build.sh >/dev/null && git add -A dist
